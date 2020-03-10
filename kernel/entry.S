@@ -22,5 +22,7 @@ _entry:
         add sp, sp, a0
 	# jump to start() in start.c
         call start
+        # switch to supervisor mode and jump to main()
+	mret
 junk:
         j junk

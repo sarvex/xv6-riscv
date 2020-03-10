@@ -1946,7 +1946,7 @@ stacktest(char *s)
   
   pid = fork();
   if(pid == 0) {
-    char *sp = (char *) r_sp();
+    char *sp = (char *) &sp;
     sp -= PGSIZE;
     // the *sp should cause a trap.
     printf("%s: stacktest: read below stack %p\n", *sp);
