@@ -13,7 +13,7 @@
 #include "riscv.h"
 #include "memlayout.h"
 
-.section trampsec
+.section trampsec,"ax",@progbits
 .globl trampoline
 trampoline:
 .align 4
